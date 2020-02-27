@@ -1,0 +1,55 @@
+
+$breakpoints: 1, 600, 800, 1024;
+$designators: tiny, small, med, large;
+
+@mixin grid() {
+	display: grid;
+	grid-gap: 1em;
+}
+
+div[class *= "-columns"].grid-gap {
+	&-none {
+		grid-gap: 0;
+	}
+	&-wide {
+		grid-gap: 1.3em;
+	}
+	&-wider {
+		grid-gap: 1.6em;
+	}
+	&-widest {
+		grid-gap: 2.1em;
+	}
+}
+
+.has-3-columns {
+	&:not(.custom-breakpoints) {
+		@include medium() {
+			@include grid();
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	&-sm {
+		@include small() {
+			@include grid();
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	&-md {
+		@include medium() {
+			@include grid();
+			grid-template-columns: repeat(3, 1fr);
+		}		
+	}
+	&-lg {
+		@include large() {
+			@include grid();
+			grid-template-columns: repeat(3, 1fr);
+		}		
+	}
+}
+
+
+
+
+
