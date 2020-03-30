@@ -1,0 +1,68 @@
+/*
+	Mailchimp signup
+	================		
+	
+	This is for the form I use across all my sites.	
+*/
+
+
+/*	Layout
+	====== */
+
+.email-signup {
+	padding: var(--mailchimp-signup--padding, 1em);
+	
+	form {
+		margin-bottom: 0.6em;
+	}
+	&__form-content {
+		display: flex;
+		width: 100%;
+	}
+	input.email {
+		padding: var(--mailchimp-signup--ui-padding, 0.4em 0.6em);
+	    width: 100%;
+	}
+	input.button {
+		padding: var(--mailchimp-signup--ui-padding, 0.4em 0.6em);
+	}
+	.mc-field-group {
+		flex: 1;
+	}
+}
+
+
+
+/*	Theming
+	======= */
+
+.email-signup {
+	background: var(--mailchimp-signup--bg, #eee);
+	
+	input {
+		border: 1px solid transparent;		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

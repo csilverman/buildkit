@@ -1,11 +1,6 @@
 {
 "AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
-	{
-		"name": "Process All Remaining Files and Folders",
-		"stepType": 1,
-		"uuidString": "BBC9C0F1-485A-4429-A03E-EB1606D122D1"
-		}
 	],
 "creatorBuild": "31934",
 "files": {
@@ -28,10 +23,10 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 604532265.10679102,
+	"creationDate": 604701971.06727397,
 	"displayValue": "quickity",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets-verd",
+	"iconImageName": "brackets-payne",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {

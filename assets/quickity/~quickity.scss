@@ -39,7 +39,8 @@
 
 .flickity-enabled {
 	//	if Flickity is working, it applies this class to the main gallery container.
-	height: var(--gallery-height, 36em);
+	height: var(--gallery-height, 26em);
+	margin-bottom: 1.6em;
 
 	.blocks-gallery-item,
 	.blocks-gallery-item figure,
@@ -61,15 +62,27 @@
 */
 
 .image-stream {
+
+	.blocks-gallery-item__caption {
+	    background: rgba(255,255,255,0.2);
+	    backdrop-filter: blur(20px);
+	    padding: 0.4em 1em;
+	}
 	.blocks-gallery-item {
 		padding: 1em;
 		padding-right: 0;
+	}
+	figure {
+		position: relative;
 	}
 	img {
 		width: unset;
 	}
 	.flickity-enabled {
 		padding-left: 0;
+	}
+	.flickity-viewport {
+		height: 100% !important;
 	}
 }
 

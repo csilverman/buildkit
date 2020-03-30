@@ -1,6 +1,6 @@
 
-$breakpoints: 1, 600, 800, 1024;
-$designators: tiny, small, med, large;
+// $breakpoints: 1, 600, 800, 1024;
+// $designators: tiny, small, med, large;
 
 @mixin grid() {
 	display: grid;
@@ -22,6 +22,45 @@ div[class *= "-columns"].grid-gap {
 	}
 }
 
+
+
+.grid {
+  display: grid;
+}
+
+
+.grid-2cols,
+.grid-3cols,
+.grid-4cols {
+  @extend .grid-2cols-small;
+}
+.grid-3cols,
+.grid-4cols {
+  @extend .grid-3cols-medium;
+}
+.grid-4cols {
+  @extend .grid-4cols-large;
+}
+
+@mixin cols($col-nums) {
+  @each $key, $value in $breakpoints {
+    @include break($key) {
+      @each $col in $col-nums {
+        .grid-#{$col}cols-#{$key} {
+	        display: grid;
+          grid-template-columns: repeat($col, 1fr);
+        }
+      }
+    }
+  }
+}
+//@include responsive-grid(3);
+
+@include cols((2, 3, 4));
+
+
+
+/*
 .has-3-columns {
 	&:not(.custom-breakpoints) {
 		@include medium() {
@@ -48,7 +87,7 @@ div[class *= "-columns"].grid-gap {
 		}		
 	}
 }
-
+*/
 
 
 
